@@ -28,12 +28,12 @@ int main()
 
 	for (x = 0; x < 160 * STEPD; x += 1.0)
 	{
-		v1 += step1(x);
+		v1 += step1(x) / STEPD;
 	}
 
 	for (x = 0; x < 178 * STEPD; x += 1.0)
 	{
-		v2 += - step2(x);
+		v2 += - step2(x) / STEPD;
 	}
 
 	printf("v1,v2=%lf,%lf\r\n", v1, v2);
